@@ -1,0 +1,19 @@
+Реализуйте программу, которая для заданных n и k вычисляет C(n, k).
+
+Realize the program that calculating C(n, k) for inputted n and k.
+
+Realiser le programme qui calcule C(n, k) pour n et k saisis.
+
+def C(n, k):
+    if k == 0:
+        return 1
+    elif k > n:
+        return 0
+    else:
+        return C(n - 1, k) + C(n - 1, k - 1)
+
+n, k = map(int, input().split())
+print(C(n, k))
+
+10 5
+252
