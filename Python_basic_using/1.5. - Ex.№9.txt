@@ -1,0 +1,21 @@
+Реализуйте класс Buffer, который будет накапливать в себе элементы последовательности
+и выводить сумму пятерок последовательных элементов по мере их накопления.
+
+Realize the class Buffer that will accumulate the elements of a sequence 
+and outputs the sum of five consecutive elements as they accumulate
+
+Realisez la classe Buffer qui accumulera les elements d'une sequence
+et sort la somme de cinq elements consecutifs au fur et a mesure qu`ils s'accumulent
+
+class Buffer:
+    def __init__(self):
+        self.buf=[]
+
+    def add(self, *a):
+        self.buf+=a
+        while len(self.buf)>=5:
+            print(sum(self.buf[:5]))
+            del(self.buf[:5])
+
+    def get_current_part(self):
+        return (self.buf)
