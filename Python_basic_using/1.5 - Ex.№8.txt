@@ -1,0 +1,16 @@
+Реализуйте класс MoneyBox, для работы с виртуальной копилкой.
+
+Realize the class MoneyBox for working with money box.
+
+Realisez la classe MoneyBox pour travailler avec une tirelire.
+
+class MoneyBox:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.amount = 0
+
+    def can_add(self, v):
+        return (v + self.amount <= self.capacity)
+
+    def add(self, v):
+        self.amount += v
