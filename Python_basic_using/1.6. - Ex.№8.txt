@@ -1,0 +1,27 @@
+Реализуйте эту структуру данных как класс ExtendedStack, отнаследовав его от стандартного класса list.
+
+Implement this data structure as an Extended Stack class, inheriting from the standard list class.
+
+Implémentez cette structure de données en tant que classe Extended Stack, héritant de la classe de liste standard
+
+
+class ExtendedStack(list):
+    def sum(self):
+        x = self.pop()
+        y = self.pop()
+        self.append(x + y)
+
+    def sub(self):
+        x = self.pop()
+        y = self.pop()
+        self.append(x - y)
+
+    def mul(self):
+        x = self.pop()
+        y = self.pop()
+        self.append(x * y)
+
+    def div(self):
+        x = self.pop()
+        y = self.pop()
+        self.append(x // y)
