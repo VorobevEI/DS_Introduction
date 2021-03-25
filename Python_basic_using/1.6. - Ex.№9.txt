@@ -1,0 +1,17 @@
+Реализуйте класс LoggableList, отнаследовав его от классов list и Loggable таким образом, 
+чтобы при добавлении элемента в список посредством метода append в лог отправлялось сообщение, 
+состоящее из только что добавленного элемента.
+
+Implement the LoggableList class, inheriting from the list and Loggable classes in such a way,
+so that when an item is added to the list using the append method, a message is sent to the log,
+consisting of the element you just added.
+
+Implémentez la classe LoggableList, héritant de la liste et des classes Loggable de telle manière,
+de sorte que lorsqu'un élément est ajouté à la liste à l'aide de la méthode append, un message est envoyé au journal,
+composé de l'élément que vous venez d'ajouter
+
+
+class LoggableList(list, Loggable):
+    def append(self, x):
+        super(LoggableList, self).append(x)
+        self.log(x)
