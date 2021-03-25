@@ -1,0 +1,46 @@
+Вам необходимо отвечать на запросы, является ли один класс предком другого класса.
+
+You need to answer queries if one class is an ancestor of another class.
+
+Vous devez repondre aux requetes si une classe est un ancetre d'une autre classe.
+
+d = dict()
+for i in range(int(input())):
+    a = input().split()
+    d[a[0]] = a[2:]
+
+for k, v in d.items():
+    for k2, v2 in d.items():
+        if k in v2:
+            v2 += v
+
+for i in range(int(input())):
+    a = input().split()
+    b = False
+    for k, v in d.items():
+        if a[1] == k and (a[0] in v or a[0] == k):
+            b = True
+    if b:
+        print('Yes')
+    else:
+        print('No')
+
+
+Sample Input:
+
+4
+A
+B : A
+C : A
+D : B C
+4
+A B
+B D
+C D
+D A
+Sample Output:
+
+Yes
+Yes
+Yes
+No
