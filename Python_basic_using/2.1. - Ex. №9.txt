@@ -1,0 +1,15 @@
+Реализуйте класс PositiveList, отнаследовав его от класса list, для хранения положительных целых чисел.
+
+Implement the Positive List class, inheriting from the list class, to store positive integers.
+
+Implémentez la classe Positive List, héritant de la classe list, pour stocker des entiers positifs.
+
+class NonPositiveError(Exception):
+    pass
+  
+class PositiveList(list):
+    def append(self, x):
+        if x > 0: 
+            list.append(self, x)
+        else:
+            raise NonPositiveError
