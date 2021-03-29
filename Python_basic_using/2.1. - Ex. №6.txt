@@ -1,0 +1,17 @@
+Вам необходимо написать код, который запускает эту функцию, 
+затем ловит исключения ArithmeticError, AssertionError, ZeroDivisionError и выводит имя пойманного исключения.
+
+You need to write the code that runs this function,
+then catches ArithmeticError, AssertionError, ZeroDivisionError exceptions and prints the name of the caught exception.
+
+Vous devez écrire le code qui exécute cette fonction,
+puis intercepte les exceptions ArithmeticError, AssertionError, ZeroDivisionError et affiche le nom de l'exception interceptée.
+
+try:
+    foo()
+except ZeroDivisionError:
+    print('ZeroDivisionError')
+except ArithmeticError:
+    print('ArithmeticError')
+except AssertionError:
+    print('AssertionError')
