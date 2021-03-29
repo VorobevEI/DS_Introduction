@@ -1,0 +1,28 @@
+
+Мы просим вас промоделировать этот процесс, и понять какие из исключений можно и не ловить, 
+потому что мы уже ранее где-то поймали их предка.
+
+We ask you to simulate this process, and understand which of the exceptions you can not catch,
+because we have already caught their ancestor somewhere earlier.
+
+Nous vous demandons de simuler ce processus, et de comprendre laquelle des exceptions vous ne pouvez pas attraper,
+parce que nous avons déjà attrapé leur ancêtre quelque part plus tôt.
+
+parents = dict()
+for _ in range(int(input())):
+    exceptions = input().split()
+    parents[exceptions[0]] = [] if ":" not in exceptions else exceptions[2:]
+
+stay_exceptions = set()
+def to_remove(exception):
+    for p in parents.get(exception, []):
+        if p in stay_exceptions or to_remove(p):
+            return True
+    return False
+
+for _ in range(int(input())):
+    exception = input()
+    if to_remove(exception):
+        print(exception)
+    else:
+        stay_exceptions.add(exception)
