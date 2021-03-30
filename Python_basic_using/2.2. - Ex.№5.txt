@@ -1,0 +1,19 @@
+Вычислите и выведите год, месяц и день даты, которая наступит, 
+когда с момента исходной даты date пройдет число дней, равное days.
+
+Calculate and output the year, month, and day of the date that will occur 
+when the number of days elapsed since the original date.
+
+
+Calculez et indiquez l'année, le mois et le jour de la date qui se produira 
+lorsque le nombre de jours se sont écoulés depuis la date d'origine.
+
+from datetime import date, timedelta
+a = list(map(int, input().split()))
+b = int(input())
+
+date = date(*a)
+days = timedelta(days=b)
+result = date + days
+
+print(result.year, result.month, result.day)
