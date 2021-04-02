@@ -1,0 +1,12 @@
+Реализуйте функцию mod_checker(x, mod=0), которая будет генерировать лямбда функцию от одного аргумента y, 
+которая будет возвращать True, если остаток от деления y на x равен mod, и False иначе.
+
+Implement mod_checker (x, mod = 0), which will generate a lambda function from one argument y, 
+which will return True if the remainder of y divided by x is mod, and False otherwise.
+
+Implémentez mod_checker (x, mod = 0), qui générera une fonction lambda à partir d'un argument y, 
+qui retournera True si le reste de y divisé par x est mod, et False sinon.
+
+
+def mod_checker(x, mod=0):
+    return lambda y: y % x == mod
