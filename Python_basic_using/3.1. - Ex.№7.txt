@@ -1,0 +1,13 @@
+Выведите одно число – количество вхождений строки t в строку s.
+
+Print one number - the number of occurrences of string t in string s.
+
+Imprimer un nombre - le nombre d'occurrences de la chaîne t dans la chaîne s.
+
+s = input()
+t = input()
+count = 0
+for i in range(len(s)):
+    if s[i:].startswith(t):
+        count += 1
+print(count)
