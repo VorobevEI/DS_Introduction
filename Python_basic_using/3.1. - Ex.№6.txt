@@ -1,0 +1,23 @@
+Выведите одно число – минимальное число операций, 
+после применения которых в строке s не останется вхождений строки a, или Impossible, 
+если операций потребуется более 1000.
+
+Print a single integer - the minimum number of operations, 
+after applying which there will be no occurrences of the string an in line s, or Impossible 
+if more than 1000 operations are required.
+
+Imprimer un seul entier - le nombre minimum d'opérations, 
+après application duquel il n'y aura pas d'occurrences de la chaîne an en ligne s, 
+ou impossible si plus de 1000 opérations sont nécessaires.
+
+s=input()
+a=input()
+b=input()
+count = 0
+while a in s:
+    s=s.replace(a, b)
+    count += 1
+    if count > 1000:
+        count = 'Impossible'
+        break
+print(count)
