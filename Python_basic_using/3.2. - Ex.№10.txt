@@ -1,0 +1,13 @@
+Выведите строки, содержащие обратный слеш "\﻿".
+
+Print lines containing a backslash "\".
+
+Imprimer les lignes contenant une barre oblique inverse "\".
+
+import re
+import sys
+pattern = r'.*\\.*'
+for line in sys.stdin:
+    line = line.rstrip()
+    if re.search(pattern, line):
+        print(line)
