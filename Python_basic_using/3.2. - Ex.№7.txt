@@ -1,0 +1,13 @@
+Выведите строки, содержащие "cat" в качестве подстроки хотя бы два раза.
+
+Print lines containing "cat" as substrings at least twice.
+
+Imprimez au moins deux fois les lignes contenant "cat" comme sous-chaînes.
+
+import re
+import sys
+pattern = r'((cat).*){2,}'
+for line in sys.stdin:
+    line = line.rstrip()
+    if re.search(pattern, line):
+        print(line)
