@@ -1,0 +1,13 @@
+В каждой строке замените все вхождения подстроки "human" на подстроку "computer"﻿ и выведите полученные строки.
+
+In each line, replace all occurrences of the substring "human" with the substring "computer" and print the resulting lines.
+
+Dans chaque ligne, remplacer toutes les occurrences de la sous-chaîne "human" par la sous-chaîne "computer" et imprimez les lignes résultantes.
+
+import re
+import sys
+
+pattern = r'human'
+
+for line in sys.stdin:
+    print(re.sub(pattern, 'computer', line.rstrip()))
