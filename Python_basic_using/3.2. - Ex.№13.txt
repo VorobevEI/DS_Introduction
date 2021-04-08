@@ -1,0 +1,16 @@
+В каждой строке замените первое вхождение слова, 
+состоящего только из латинских букв "a" (регистр не важен), на слово "argh".
+
+In each line, replace the first occurrence of a word 
+consisting only of Latin letters "a" (case is not important) with the word "argh".
+
+Dans chaque ligne, remplacez la première occurrence d'un mot 
+composé uniquement de lettres latines "a" (la casse n'est pas importante) par le mot "argh".
+
+import re
+import sys
+
+pattern = r'\b[Aa]+\b'
+
+for line in sys.stdin:
+    print(re.sub(pattern, 'argh', line.rstrip(), 1))
