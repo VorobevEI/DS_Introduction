@@ -1,0 +1,34 @@
+Для каждого класса вычислите предком скольких классов он является и выведите эту информацию
+
+For each class, calculate the ancestor of how many classes it is and print this information
+
+
+Pour chaque classe, calculez l'ancêtre du nombre de classes et imprimez ces informations
+
+import json
+data = json.loads(input())
+n=len(data)
+dict1={}
+classes={}
+ans=[]
+for i in data:
+    classes[i['name']] = 1
+for i in range(n):
+    tmp=data[i]
+    if len(tmp)!=1:
+        for i in tmp['parents']:
+            if i not in dict1:
+                dict1[i]=set()
+            dict1[i].add(tmp['name'])
+for i in range(n):
+    for key,value in dict1.items():
+        for x in value:
+            if x in dict1:
+                dict1[key]=dict1[key]|dict1[x]
+for key in dict1.keys():
+    for i in dict1[key]:
+        classes[key]+=1
+for key,value in classes.items():
+    ans.append(key+' : '+str(value))
+for i in sorted(ans):
+    print(i)
